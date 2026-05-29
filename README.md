@@ -1,178 +1,105 @@
-# 📊 Getting Started — React Pivot Table Component (Syncfusion EJ2)
+# 📊 React Pivot Table Sample (Syncfusion EJ2)
 
-[![License](https://img.shields.io/badge/license-SEE%20LICENSE%20IN%20license-blue.svg)](https://www.syncfusion.com/content/downloads/syncfusion_license.pdf)
-[![React](https://img.shields.io/badge/React-19.2.4-blue.svg)](https://react.dev/)
-[![Last Updated](https://img.shields.io/github/last-commit/SyncfusionExamples/getting-started-with-the-react-pivot-table-component.svg)](https://github.com/SyncfusionExamples/getting-started-with-the-react-pivot-table-component/commits)
-[![Syncfusion Version](https://img.shields.io/badge/Syncfusion%20EJ2-32.1.19-green.svg)](https://www.syncfusion.com/react-components/)
-[![Node.js](https://img.shields.io/badge/Node.js-LTS-green.svg)](https://nodejs.org/)
-[![npm](https://img.shields.io/badge/npm-v10%2B-blue.svg)](https://www.npmjs.com/)
+[![React](https://img.shields.io/badge/React-19.2.6-blue.svg)](https://react.dev/)
+[![Syncfusion](https://img.shields.io/badge/Syncfusion%20EJ2-33.2.6-green.svg)](https://www.syncfusion.com/react-components/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6.0-blue.svg)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-8.0-purple.svg)](https://vitejs.dev/)
 
-> 🚀 **React quick-start template** demonstrating Syncfusion EJ2 `PivotView` (Pivot Table) with **Field List**, **Calculated Fields**, **Data Formatting**, **Multi-level Sorting & Filtering** — includes sample sales data, CLI scripts, and production-ready configuration.
+> A **minimal React sample** demonstrating Syncfusion EJ2 `PivotView` with **Field List**, **Calculated Fields**, and **Currency Formatting**. Built with TypeScript, Vite, and includes sample sales data.
 
 > **📺 Official Demo:** https://ej2.syncfusion.com/react/demos/#/material3/pivot-table/overview  
-> **📚 Official Documentation:** https://ej2.syncfusion.com/react/documentation/pivotview/getting-started
+> **📚 Documentation:** https://ej2.syncfusion.com/react/documentation/pivotview/getting-started
 
 ---
 
-## 📑 Table of Contents
+## 📑 Quick Links
 
 - [🔍 Overview](#-overview)
-- [✨ Key Features](#-key-features)
-- [📋 Prerequisites](#-prerequisites)
-- [🧭 Quick Start](#-quick-start)
+- [✨ Features](#-features)
+- [⚡ Quick Start](#-quick-start)
 - [🗂️ Project Structure](#-project-structure)
-- [🎨 Theming & Styling](#-theming--styling)
-- [🧩 Minimal Example](#-minimal-example)
-- [⚙️ Configuration & Customization](#-configuration--customization)
-- [💡 Usage Examples](#-usage-examples)
-- [🔗 Dependencies & Browser Support](#-dependencies--browser-support)
-- [🤝 Contributing](#-contributing)
-- [📜 License & Support](#-license--support)
+- [📦 Dependencies](#-dependencies)
 
 ---
 
 ## 🔍 Overview
 
-This repository provides a **production-ready starter template** for integrating Syncfusion's powerful `PivotView` (Pivot Table) component into your **React applications**. It demonstrates essential pivot table features for real-world business intelligence and data analysis scenarios.
+A practical React sample showcasing Syncfusion's `PivotView` component. This sample demonstrates:
 
-The sample includes:
-- ✅ Interactive Pivot Table with comprehensive data analysis
-- ✅ Dynamic Field List for runtime field configuration
-- ✅ Calculated Fields for custom data computations
-- ✅ Data Formatting (currency, percentages, custom formats)
-- ✅ Multi-level Sorting and Filtering capabilities
-- ✅ Sample sales dataset with real-world data structure
-- ✅ Responsive design with Tailwind CSS styling
-- ✅ Pre-configured data source with drill-down support
+- **Interactive Pivot Table** with sales data (Country, State, Product, Date, Amount, Quantity)
+- **Dynamic Field List** for runtime field configuration
+- **Calculated Fields** for custom calculations
+- **Currency Formatting** (Amount displayed in currency format)
+- **Pre-configured Data Source** with drill-down support for France
 
-### Who Should Use This?
+### Use Cases
 
-- 📈 Business analysts building custom reporting tools
-- 💼 Enterprise developers creating dashboards and analytics
-- 🎓 React developers learning Syncfusion component integration
-- 🛠️ Teams migrating from legacy pivot table solutions
+- 📊 Business analytics dashboards
+- 💼 Sales data visualization
+- 📈 Multi-dimensional data exploration
 
 ---
 
-## ✨ Key Features
+## ✨ Features
 
-| Feature | Description | Benefit |
-|---------|-------------|---------|
-| 🎯 **Field List Interface** | Dynamically add, remove, and rearrange data fields at runtime | Empowers end-users to customize reports without code modifications |
-| 📊 **Flexible Data Binding** | Supports relational data binding with hierarchical structures | Handle complex multi-dimensional business data |
-| 🧮 **Calculated Fields** | Create custom formulas combining multiple data fields | Advanced data analysis and business metric computation |
-| 💱 **Data Formatting** | Display values in currency, percentages, and custom formats | Professional presentation of numerical data |
-| ↕️ **Multi-Level Sorting** | Sort by multiple fields with ascending/descending control | Enhanced data exploration and trend analysis |
-| 🔗 **Advanced Filtering** | Filter by single or multiple criteria across all dimensions | Focused data analysis and drill-down exploration |
-| 📱 **Responsive Design** | Adapts seamlessly to desktop, tablet, and mobile screens | Universal accessibility across all devices |
-| 📤 **Export Functionality** | Export pivot table data to Excel and PDF formats | Generate shareable reports and archives |
-| 🎨 **Theme Support** | Multiple Tailwind and Bootstrap themes available | Consistent branding and visual customization |
-| ⚡ **Performance Optimized** | Efficient rendering with virtual scrolling | Handle large datasets without performance degradation |
+| Feature | Details |
+|---------|---------|
+| 🎯 **Field List** | Dynamically configure rows, columns, values, and filters |
+| 🧮 **Calculated Fields** | Create custom formulas for advanced analysis |
+| 💱 **Currency Formatting** | Amount values displayed in currency format |
+| 📊 **Drill-Down Support** | France pre-configured for drill-down exploration |
+| 🔄 **Multi-Dimensional Data** | Organized by Country, State, Product, and Date |
+| 📏 **Compact & Efficient** | Minimal setup, ready-to-run sample
 
 ---
 
-## 📋 Prerequisites
+## ⚡ Quick Start
 
-Ensure you have the following installed on your system:
+### Prerequisites
 
-- **Node.js** (LTS version 18.x or higher) — [Download](https://nodejs.org/)
-- **npm** (v9+) or **yarn** (v1.22+) — Included with Node.js
-- **Visual Studio Code** (Recommended) — [Download](https://code.visualstudio.com/download)
-- **Git** (For cloning the repository) — [Download](https://git-scm.com/)
+- **Node.js** v18+ — [Download](https://nodejs.org/)
+- **npm** v9+ (included with Node.js)
 
-### Supported Browsers
-
-- ✅ Chrome (Latest)
-- ✅ Firefox (Latest)
-- ✅ Safari (Latest)
-- ✅ Edge (Latest)
-
----
-
-## 🧭 Quick Start
-
-### 1️⃣ Clone the Repository
+### Installation & Setup
 
 ```bash
-git clone https://github.com/SyncfusionExamples/getting-started-with-the-react-pivot-table-component.git
-cd getting-started-with-the-react-pivot-table-component
-```
-
-### 2️⃣ Install Dependencies
-
-#### Using npm:
-
-```bash
+# Install dependencies
 npm install
+
+# Start development server
+npm run dev
 ```
 
-#### Using yarn:
-
-```bash
-yarn install
-```
-
-### 3️⃣ Start the Development Server
-
-#### Using npm:
-
-```bash
-npm start
-```
-
-#### Using yarn:
-
-```bash
-yarn start
-```
-
-The application will automatically open in your default browser at:
-```
-http://localhost:3000
-```
+The application opens at `http://localhost:5173`
 
 ---
 
-## 🔗 Dependencies & Browser Support
+## � Dependencies
 
-### Primary Dependencies
-
-```
-@syncfusion/ej2-react-pivotview (^26.1.39)
-├── @syncfusion/ej2-pivotview
-├── @syncfusion/ej2-data
-├── @syncfusion/ej2-grids
-├── @syncfusion/ej2-excel-export
-├── @syncfusion/ej2-pdf-export
-├── @syncfusion/ej2-calendars
-├── @syncfusion/ej2-charts
-├── @syncfusion/ej2-inputs
-├── @syncfusion/ej2-buttons
-├── @syncfusion/ej2-dropdowns
-├── @syncfusion/ej2-lists
-├── @syncfusion/ej2-popups
-└── @syncfusion/ej2-navigations
-```
-
-### Other Project Dependencies
+### Production
 
 ```json
 {
-  "react": "^19.2.4",
-  "react-dom": "^19.2.4",
-  "react-scripts": "5.0.1"
+  "@syncfusion/ej2-react-pivotview": "^33.2.6",
+  "react": "^19.2.6",
+  "react-dom": "^19.2.6"
 }
 ```
 
-### Browser Compatibility
+### Development
 
-| Browser | Minimum Version | Status |
-|---------|-----------------|--------|
-| Chrome | 90+ | ✅ Fully Supported |
-| Firefox | 88+ | ✅ Fully Supported |
-| Safari | 14+ | ✅ Fully Supported |
-| Edge | 90+ | ✅ Fully Supported |
-| IE 11 | - | ⚠️ Requires Polyfills |
+- TypeScript (~6.0.2)
+- Vite (^8.0.12)
+- ESLint (^10.3.0)
+
+### Available Scripts
+
+```bash
+npm run dev      # Start development server
+npm run build    # Build for production
+npm run lint     # Run ESLint
+npm run preview  # Preview production build
+```
 
 ---
 
@@ -180,309 +107,78 @@ http://localhost:3000
 
 ```
 getting-started-with-the-react-pivot-table-component/
-├── public/
-│   ├── index.html                 # Main HTML entry point
-│   ├── manifest.json              # PWA manifest configuration
-│   └── robots.txt                 # SEO robots configuration
 ├── src/
-│   ├── App.js                     # Main React component with PivotView
-│   ├── App.css                    # Component styling & theme imports
-│   ├── App.test.js                # Unit tests for App component
-│   ├── datasource.js              # Sample sales data (pivot table dataset)
-│   ├── index.js                   # React application entry point
-│   ├── index.css                  # Global application styles
-│   ├── reportWebVitals.js         # Performance monitoring
-│   └── setupTests.js              # Test environment configuration
-├── package.json                   # Project dependencies & scripts
-├── README.md                       # This file
-├── getting-started.md             # Detailed getting started guide
-└── .gitignore                      # Git ignore configuration
-
-### Key Files Explained:
-
-- **`src/App.js`** — Core PivotView component with configuration, field list, and calculated fields enabled
-- **`src/datasource.js`** — Sample dataset containing sales data across multiple countries
-- **`src/App.css`** — Imports all required Syncfusion themes and component styles
+│   ├── App.tsx              # Main React component with PivotView
+│   ├── App.css              # Component styling
+│   ├── datasource.ts        # Sales dataset (15 records)
+│   ├── main.tsx             # React entry point
+│   └── index.css             # Global styles
+├── public/                  # Static assets
+├── package.json             # Dependencies & scripts
+├── vite.config.ts           # Vite configuration
+├── tsconfig.json            # TypeScript configuration
+└── README.md                # This file
 ```
+
+### Key Files
+
+- **src/App.tsx** — PivotView configuration with rows (Country, State), columns (Date, Product), and values (Amount, Quantity)
+
 
 ---
 
-## 🎨 Theming & Styling
+## 📖 Core Implementation
 
-### Available Themes
+### PivotView Configuration (src/App.tsx)
 
-Syncfusion provides multiple professional themes. Update your `src/App.css` to use your preferred theme:
-
-#### Option 1: Tailwind3 Theme (Default - Recommended)
-```css
-@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-react-pivotview/styles/tailwind3.css';
-```
-
-#### Option 2: Bootstrap5 Theme
-Replace `tailwind3.css` with `bootstrap5.css` in all imports
-
-#### Option 3: Material Theme
-Replace `tailwind3.css` with `material.css` in all imports
-
-### Custom Styling
-
-Add custom CSS to `src/App.css` after the theme imports:
-
-```css
-/* Override Syncfusion defaults */
-.e-pivotview {
-  background-color: #f5f5f5;
-  border-radius: 8px;
-}
-
-.e-pivot-button {
-  border-color: #007bff;
-}
-```
-
----
-
-## 🧩 Minimal Example
-
-Create a basic PivotView with just a few lines of code:
-
-```jsx
-import React from 'react';
-import { PivotViewComponent, Inject, FieldList } from '@syncfusion/ej2-react-pivotview';
-import './App.css';
-
-const MinimalPivotApp = () => {
-  const dataSourceSettings = {
-    dataSource: [
-      { Country: 'USA', Product: 'Bike', Amount: 1000, Quantity: 10 },
-      { Country: 'USA', Product: 'Car', Amount: 5000, Quantity: 5 },
-      { Country: 'Canada', Product: 'Bike', Amount: 800, Quantity: 8 }
-    ],
-    rows: [{ name: 'Country' }],
-    columns: [{ name: 'Product' }],
-    values: [{ name: 'Amount', caption: 'Sales Amount' }],
-    filters: []
-  };
-
-  return (
-    <PivotViewComponent 
-      id='PivotView' 
-      height={350} 
-      dataSourceSettings={dataSourceSettings}
-      showFieldList={true}
-    >
-      <Inject services={[FieldList]} />
-    </PivotViewComponent>
-  );
-};
-
-export default MinimalPivotApp;
-```
-
----
-
-## ⚙️ Configuration & Customization
-
-### Essential Properties
-
-```jsx
-<PivotViewComponent
-  id='PivotView'
-  height={350}                      // Display height in pixels
-  dataSourceSettings={dataSourceSettings}
-  allowCalculatedField={true}       // Enable calculated fields
-  showFieldList={true}              // Display field list panel
-  showGroupingBar={true}            // Show grouping bar for drag-drop
-  allowDrilling={true}              // Enable drill-down functionality
-  allowExcelExport={true}           // Enable Excel export
-  allowPdfExport={true}             // Enable PDF export
->
-  <Inject services={[CalculatedField, FieldList, GroupingBar]} />
-</PivotViewComponent>
-```
-
-### DataSourceSettings Configuration
-
-```jsx
-const dataSourceSettings = {
-  dataSource: pivotData,
+```tsx
+const dataSourceSettings: DataSourceSettingsModel = {
+  columns: [{ name: 'Date', caption: 'Date' }, { name: 'Product' }],
+  dataSource: pivotData as IDataSet[],
   expandAll: false,
-  
-  // Field arrangement in axes
-  rows: [
-    { name: 'Country', caption: 'Country' },
-    { name: 'State' }
-  ],
-  columns: [
-    { name: 'Date', caption: 'Fiscal Year' },
-    { name: 'Product' }
-  ],
-  values: [
-    { name: 'Amount', caption: 'Total Sales', type: 'Sum' },
-    { name: 'Quantity', caption: 'Quantity Sold', type: 'Count' }
-  ],
   filters: [],
-  
-  // Formatting
-  formatSettings: [
-    { name: 'Amount', format: 'C2' },  // Currency with 2 decimals
-    { name: 'Quantity', format: 'N0' } // Number without decimals
-  ],
-  
-  // Drill-down configuration
-  drilledMembers: [
-    { name: 'Country', items: ['France'] }
-  ]
-};
-```
-
-### Format String Examples
-
-| Format Code | Example Output | Use Case |
-|------------|-----------------|----------|
-| `C0` | $1,234 | Currency without decimals |
-| `C2` | $1,234.56 | Currency with 2 decimals |
-| `N0` | 1,234 | General number |
-| `N2` | 1,234.56 | Decimal numbers |
-| `P0` | 50% | Percentage |
-| `P2` | 50.25% | Percentage with decimals |
-
----
-
-## 💡 Usage Examples
-
-### Example 1: Sales Dashboard with Calculated Fields
-
-```jsx
-import { PivotViewComponent, Inject, CalculatedField, FieldList } from '@syncfusion/ej2-react-pivotview';
-import { pivotData } from './datasource';
-
-function SalesDashboard() {
-  const dataSourceSettings = {
-    dataSource: pivotData,
-    rows: [{ name: 'Country' }],
-    columns: [{ name: 'Date' }, { name: 'Product' }],
-    values: [
-      { name: 'Amount', caption: 'Sales' },
-      { name: 'Quantity', caption: 'Qty' }
-    ],
-    formatSettings: [{ name: 'Amount', format: 'C0' }]
-  };
-
-  return (
-    <div>
-      <h1>📊 International Sales Dashboard</h1>
-      <PivotViewComponent
-        id='SalesPivot'
-        height={400}
-        dataSourceSettings={dataSourceSettings}
-        allowCalculatedField={true}
-        showFieldList={true}
-      >
-        <Inject services={[CalculatedField, FieldList]} />
-      </PivotViewComponent>
-    </div>
-  );
-}
-
-export default SalesDashboard;
-```
-
-### Example 2: Regional Performance Analysis
-
-```jsx
-const regionalSettings = {
-  dataSource: pivotData,
+  drilledMembers: [{ name: 'Country', items: ['France'] }],
+  formatSettings: [{ name: 'Amount', format: 'C0' }],
   rows: [{ name: 'Country' }, { name: 'State' }],
-  columns: [{ name: 'Date' }],
   values: [
-    { name: 'Amount', caption: 'Revenue' },
-    { name: 'Quantity', caption: 'Units Sold' }
-  ],
-  filters: [{ name: 'Product', caption: 'Filter by Product' }],
-  formatSettings: [{ name: 'Amount', format: 'C2' }],
-  drilledMembers: [{ name: 'Country', items: ['France', 'Germany'] }]
-};
-```
-
-### Example 3: Custom Formatting with Conditional Styling
-
-```jsx
-const advancedSettings = {
-  dataSource: pivotData,
-  rows: [{ name: 'Country' }],
-  columns: [{ name: 'Product' }],
-  values: [{ name: 'Amount', caption: 'Total Amount' }],
-  formatSettings: [
-    {
-      name: 'Amount',
-      format: 'C2',
-      minimumSignificantDigits: 1,
-      maximumSignificantDigits: 3
-    }
+    { name: 'Amount', caption: 'Sold Amount' }, 
+    { name: 'Quantity', caption: 'Quantity' }
   ]
 };
 ```
 
----
+- **Rows:** Country, State (hierarchical)
+- **Columns:** Date, Product
+- **Values:** Amount (currency), Quantity
+- **Currency Formatting:** Amount shows as C0 (e.g., $2,100)
+- **Drill-Down:** France pre-configured for exploration
 
-## 🤝 Contributing
+### Sample Data Structure
 
-We welcome contributions! Here's how you can help:
-
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
-3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
-4. **Push** to the branch (`git push origin feature/amazing-feature`)
-5. **Open** a Pull Request
-
-### Guidelines
-
-- Follow React and ES6+ best practices
-- Include comments for complex logic
-- Add tests for new features
-- Update documentation as needed
-
----
-
-## 📜 License & Support
-
-### License
-
-This project is licensed under the **Syncfusion Community License**. See the [Syncfusion License](https://www.syncfusion.com/content/downloads/syncfusion_license.pdf) for details.
-
-### Support & Resources
-
-- 📚 **Official Documentation:** [Syncfusion React PivotView](https://ej2.syncfusion.com/react/documentation/pivotview/getting-started)
-- 🎬 **Video Tutorials:** [Syncfusion YouTube Channel](https://www.youtube.com/c/SyncfusionInc)
-- 💬 **Support Forum:** [Syncfusion Support](https://www.syncfusion.com/forums/react-js2)
-- 🐛 **Report Issues:** [GitHub Issues](https://github.com/SyncfusionExamples/getting-started-with-the-react-pivot-table-component/issues)
-- 📧 **Contact Us:** support@syncfusion.com
-
-### Additional Resources
-
-- 🔗 [Syncfusion React Components](https://www.syncfusion.com/react-components/)
-- 📖 [Syncfusion Community](https://www.syncfusion.com/forums/react-js2)
-- 🎯 [Getting Started with React](https://ej2.syncfusion.com/react/documentation/getting-started/create-app)
+```typescript
+{
+  Amount: number,
+  Country: string,        // Canada, France, Germany, United Kingdom, United States
+  Date: string,          // FY 2005-2008
+  Product: string,       // Bike, Van, Car
+  Quantity: number,
+  State: string
+}
+```
 
 ---
 
-## ⚡ Performance Tips
+## 🚀 Next Steps
 
-- ✅ Use **virtual scrolling** for large datasets (1000+ rows)
-- ✅ Enable **lazy loading** for remote data sources
-- ✅ Optimize **format settings** to reduce rendering overhead
-- ✅ Use **filter and drill-down** to reduce data volume displayed
-- ✅ Consider **server-side aggregation** for very large datasets
+1. Modify `src/datasource.ts` to add your own data
+2. Update `dataSourceSettings` in `src/App.tsx` for different dimensions
+3. Add more field services (`GroupingBar`, `ConditionalFormatting`, etc.) via Inject
+4. Enable exports: `allowExcelExport`, `allowPdfExport`
 
 ---
+
+## 📚 Resources
+
+- [Syncfusion PivotView Docs](https://ej2.syncfusion.com/react/documentation/pivotview/getting-started)
+- [Syncfusion React Components](https://www.syncfusion.com/react-components/)
+- [GitHub Issues](https://github.com/SyncfusionExamples/)
